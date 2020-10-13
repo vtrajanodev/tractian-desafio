@@ -1,5 +1,5 @@
 {
-  "name": "desafio-tractian",
+  "name": "tractian-desafio",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,5 +17,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
-  }
+  },
+  "repository": "https://github.com/vtrajanodev/tractian-desafio.git",
+  "author": "Victor Trajano <trajanodev@hotmail.com>"
 }
