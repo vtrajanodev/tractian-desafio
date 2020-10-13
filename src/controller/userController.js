@@ -1,12 +1,10 @@
 const mongoose = require('mongoose')
-const { addListener } = require('nodemon')
-const { update, getById } = require('./ativoController')
 const User = mongoose.model('User')
 
 
 module.exports = {
     
-    async index(req , res){
+    async indexUser(req , res){
 
         const showAll = await User.find()
         

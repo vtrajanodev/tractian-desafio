@@ -1,13 +1,10 @@
 const mongoose = require('mongoose')
-const { addListener } = require('nodemon')
-const { update } = require('./ativoController')
 const Unidade = mongoose.model('Unidade')
-const Ativo = mongoose.model('Ativo')
 const Empresa = mongoose.model('Empresa')
 
 module.exports = {
     
-    async index(req , res){
+    async indexCompany(req , res){
 
         const showAll = await Empresa.find()
         
@@ -25,7 +22,7 @@ module.exports = {
 
     },
 
-    async register(req, res){
+    async registerCompany(req, res){
         const registerUnit = await Empresa.create(req.body)
 
         return res.json(registerUnit)
