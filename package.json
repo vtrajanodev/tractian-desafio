@@ -1,14 +1,10 @@
 {
-  "name": "tractian-desafio",
+  "name": "desafio-tractian",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
+  "repository": "https://github.com/vtrajanodev/tractian-desafio.git",
+  "author": "Victor Trajano <trajanodev@hotmail.com>",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "node server.js"
-  },
-  
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -17,9 +13,8 @@
     "mongoose-paginate": "^5.0.3",
     "require-dir": "^1.2.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.5"
-  },
-  "repository": "https://github.com/vtrajanodev/tractian-desafio.git",
-  "author": "Victor Trajano <trajanodev@hotmail.com>"
+  "scripts": {
+    "start": "node server.js"
+  }
+
 }
