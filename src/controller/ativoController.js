@@ -33,11 +33,11 @@ module.exports = {
 
     async registerActive(req, res){
        
-        const {name, img, description, model} = req.body
+        const {name, img, description, model, healthStatus, status} = req.body
 
         const { unidade } = req.query
 
-        const active = Ativo.create({name, img, description, model, unidade: unidade})
+        const active = Ativo.create({name, img, healthStatus, status, description, model, unidade: unidade})
         
         return res.json(active)
     },
