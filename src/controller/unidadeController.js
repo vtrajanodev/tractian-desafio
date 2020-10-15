@@ -21,9 +21,9 @@ module.exports = {
 
     async getByReq(req, res){
 
-        const {unidade} = req.query
+        const { unidade } = req.query
 
-        const getUnitById = await Ativo.find({unidade: unidade})
+        const getUnitById = await Ativo.findOne({unidade: unidade})
 
         return res.json(getUnitById)
 

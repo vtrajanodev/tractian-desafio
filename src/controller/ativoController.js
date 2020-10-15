@@ -19,6 +19,16 @@ module.exports = {
 
     },
 
+    async getByActiveReq(req, res){
+
+        const { unidade } = req.query
+
+        const getUnitById = await Ativo.findOne({unidade: unidade})
+
+        return res.json(getUnitById)
+
+    },
+
     async registerActive(req, res){
        
         const {name, img, description, model} = req.body

@@ -30,6 +30,7 @@ routes.post('/unidade' , unidadeController.registerUnit)
 
 routes.get('/ativo' , ativoController.indexActive)
 routes.get('/ativo/:id' , ativoController.getActiveById)
+routes.get('/ativos' , ativoController.getByActiveReq)
 routes.post('/ativo'  , ativoController.registerActive)
 routes.put('/ativo/:id'  , ativoController.updateActive)
 routes.delete('/ativo/:id'  , ativoController.deleteActive)
