@@ -10,7 +10,7 @@ const unidadeSchema = new mongoose.Schema({
 
 const ativoSchema = new mongoose.Schema({
 
-    unidade: { type: mongoose.Schema.Types.ObjectId, ref: 'Unidade'},
+    unidade: { type: mongoose.Schema.Types.ObjectId, ref: 'Unidade', required: true},
        
     img: {
         type: String,

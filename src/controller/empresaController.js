@@ -24,7 +24,7 @@ module.exports = {
         
         const  { empresa }  = req.query
 
-        const getUnidades = await Unidade.findOne({empresa: empresa})
+        const getUnidades = await Unidade.find({empresa: empresa})
 
         return res.json(getUnidades)
 
