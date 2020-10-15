@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const unidadeSchema = new mongoose.Schema({
 
     name: String, 
+    adress: String,
     description: String,
     empresa: { type: mongoose.Schema.Types.ObjectId, ref: 'Empresa'},
 
@@ -32,10 +33,19 @@ const ativoSchema = new mongoose.Schema({
         
     }, 
 
+    healthStatus: {
+        type: Number,
+    }, 
+
+    status:{
+        type: String
+    },
+
     createdAt:{
         type: Date,
         default: Date.now
     }
+    
 })
 
 
