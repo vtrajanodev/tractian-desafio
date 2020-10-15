@@ -11,7 +11,8 @@ const userController = require('./controller/userController')
 
 //Agrupamento de rotas CRUD - Detalhamento Empresa. 
 routes.get('/empresa' ,  empresaController.indexCompany)
-routes.get('/empresas', empresaController.getByCompanyId)
+routes.get('/empresas', empresaController.getByCompanyReq)
+routes.get('/empresa', empresaController.getByCompanyId)
 routes.post('/empresa' , empresaController.registerCompany)
 routes.put('/empresa/:id' , empresaController.updateCompany)
 routes.delete('/empresa/:id' , empresaController.deleteCompany)
