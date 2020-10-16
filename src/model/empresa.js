@@ -1,4 +1,6 @@
 const mongoose = require('mongoose')
+const mongoosePaginate = require('mongoose-paginate')
+
 
 const empresaSchema = new mongoose.Schema({
 
@@ -18,5 +20,6 @@ const empresaSchema = new mongoose.Schema({
     }
 })
 
+empresaSchema.plugin(mongoosePaginate)
 mongoose.model('Empresa' , empresaSchema)
 module.exports = 'Empresa'

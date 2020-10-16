@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const mongoosePaginate = require('mongoose-paginate')
 
 const unidadeSchema = new mongoose.Schema({
 
@@ -48,7 +49,7 @@ const ativoSchema = new mongoose.Schema({
     
 })
 
-
-
+unidadeSchema.plugin(mongoosePaginate)
+ativoSchema.plugin(mongoosePaginate)
 mongoose.model('Unidade' , unidadeSchema)
 mongoose.model('Ativo' , ativoSchema)

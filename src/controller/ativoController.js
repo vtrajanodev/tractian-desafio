@@ -5,10 +5,10 @@ module.exports = {
     
     async indexActive(req , res){
 
-        const showAll = await Ativo.find()
-        
-        return res.json(showAll)
+        const {page = 1} = req.query
+        const showAll = await Ativo.paginate({} , {page , limit: 6})
 
+        return res.json(showAll)
     },
 
     async getActiveById(req, res){
@@ -21,6 +21,7 @@ module.exports = {
 
     async getByActiveReq(req, res){
 
+      
         const { unidade } = req.query
 
         const getUnitById = await Ativo.find({unidade: unidade})
