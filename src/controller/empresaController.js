@@ -12,14 +12,6 @@ module.exports = {
 
     } ,
 
-    async getByCompanyId(req, res){
-        
-       const getCompany = await Empresa.findById(req.params.id)
-
-       return res.json(getCompany)
-
-    },
-
     async getByCompanyReq(req, res){
         
         const  { empresa }  = req.query
