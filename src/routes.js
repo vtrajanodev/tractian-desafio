@@ -41,6 +41,4 @@ routes.post('/users/' , userController.registerUser)
 routes.put('/users/:id' , userController.updateUser)
 routes.put('/users/:id' , userController.deleteUser)
 
-
-
 module.exports = routes
