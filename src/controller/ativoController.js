@@ -23,8 +23,6 @@ module.exports = {
 
         const { unidade } = req.query
 
-        console.log(unidade)
-
         const getUnitById = await Ativo.find({unidade: unidade})
 
         return res.json(getUnitById)
